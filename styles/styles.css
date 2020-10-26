@@ -3,14 +3,15 @@
 :root {
   --titles-color: #1F1C1B;
   --text-primary-color: #535353;
-  --primary-background-color: #5d6d75;
+  --primary-background-color: #685b5b;
+  --secondary-background-color: #eeeeee;
   --logo-red-color: #C14752;
   --pink-color: #CAA3A7;
   --white-color: white;
 
 }
 body {
-background-color: var(--white-color);
+background-color: var(--secondary-background-color);
 font-family: 'Montserrat', sans-serif;
 color: #424242;
 -webkit-font-smoothing: antialiased;
@@ -57,7 +58,7 @@ nav a:hover {
 }
 
 .mapa {
-
+  margin-left: 30%;
 }
 
 .form {
@@ -80,10 +81,15 @@ nav a:hover {
 }
 
 .local-image {
-  height: 820px;
-  margin-left: -10px;
+  height: 100%;
+  width: 100%;
 }
 
 .productos {
   border: black;
+}
+
+.marco {
+  margin: 0px 100px 0px 100px;
+  background-color: white;
 }
