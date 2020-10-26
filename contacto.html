@@ -3,47 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <title>Ferreteria Torresel</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li>
-        <a href="index.html"><img src="images/logo-mobile.svg"></a>
-      </li>
-      <li>
-        <a href="index.html">inicio</a>
-      </li>
-      <li>
-        <a href="nosotros.html">nosotros</a>
-      </li>
-      <li>
-        <a href="productos.html">productos</a>
-      </li>
-      <li>
-        <a href="ubicacion.html">ubicación</a>
-      </li>
-      <li>
-        <a href="contacto.html">contacto</a>
-      </li>
-    </ul>
-  </nav>
-  <div>
-    <form>
-      <label for=#nombre>Nombre </label>
-      <input id="nombre" type="text" placeholder="*Nombre" required>
-      <label for=#email>Email </label>
-      <input id="email" type="email" placeholder="*E-mail" required>
-      <label for=#telefono>Telefóno </label>
-      <input id="telefono" type="tel" placeholder="Telefono" required>
-      <label for="newsletter">
-        Quiero recibir información sobre nuevos productos <input id="newsletter" type="checkbox" value="Si">
-      </label>
-      <label for="mensaje">Consulta</label>
-      <textarea id="mensaje">*Escriba su consulta aqui.. </textarea>
-      <input type="submit" value="Enviar formulario">
-    </form>
-    <p><span>(*)</span>Campos requeridos</p>
-  </div>
+
+  <header>
+
+    <nav>
+      
+      <a href="index.html"><img class="logo" src="images/LOGO.svg" alt="logo"></a>
+      
+      <ul>
+        <li>
+          <a href="index.html">Inicio</a>
+        </li>
+        <li>
+          <a href="nosotros.html">Nosotros</a>
+        </li>
+        <li>
+          <a href="productos.html">Productos</a>
+        </li>
+        <li>
+          <a href="ubicacion.html">Ubicación</a>
+        </li>
+        <li>
+          <a href="contacto.html">Contacto</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main>
+    <div>
+      <h2>Contacto</h2>
+      <form class="form" action="#" method="POST">
+        <div class="campo">
+          <label label for=#nombre>Nombre </label>
+          <input id="nombre" name="nombre" type="text" placeholder="*Nombre" required>
+        </div>
+        <div class="campo">
+          <label for=#email>Email </label>
+          <input id="email" name="email" type="email" placeholder="*E-mail" required>
+        </div>
+        <div class="campo">
+          <label for=#telefono>Telefóno </label>
+          <input id="telefono" name="telefono" ype="tel" placeholder="Telefono" required>
+        </div>
+        <div class="campo">
+          <label for="newsletter">Quiero recibir información sobre nuevos productos</label>
+          <input id="newsletter" name="recibir-info" type="checkbox" value="Si">
+        </div>
+        <div class="campo">
+          <label for="mensaje">Consulta</label>
+          <textarea name="consulta" id="mensaje">*Escriba su consulta aqui.. </textarea>
+        </div>
+          <input type="submit" value="Enviar formulario">
+      </form>
+      <p><span>(*)</span>Campos requeridos</p>
+    </div>
+  </main>
+
   <footer>
     <ul>
       <li>Todos los derechos reservados</li>
@@ -54,5 +76,6 @@
       <li>ferreteriatorresel@gmail.com</li>
     </ul>
   </footer>
+
 </body>
 </html>
