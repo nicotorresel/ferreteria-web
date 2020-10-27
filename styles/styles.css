@@ -17,6 +17,11 @@ color: #424242;
 -webkit-font-smoothing: antialiased;
 }
 
+.marco {
+  margin: 0px 100px 0px 100px;
+  background-color: white;
+}
+
 h2 {
   font-family: 'Karla', sans-serif;
   font-size: 40px;
@@ -79,17 +84,29 @@ nav a:hover {
 .campo label {
   text-align: left;
 }
+ 
+.main-image {
+  position: relative;
+  background-color:#f7f7f7;
+  text-align: center;
+}
 
 .local-image {
   height: 100%;
   width: 100%;
+  -webkit-filter: sepia(30%);
+}
+
+.parrafo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.descripcion {
+  padding: 0 30px 30px 30px;
 }
 
 .productos {
   border: black;
-}
-
-.marco {
-  margin: 0px 100px 0px 100px;
-  background-color: white;
 }
