@@ -8,8 +8,14 @@
   --red-color: #de193a;
   --rose-color: #a18588;
   --white-color: white;
-
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
 background-color: var(--secondary-background-color);
 font-family: 'Montserrat', sans-serif;
@@ -23,7 +29,8 @@ h1 {
   font-weight: 900;
   font-size: 100px;
   color: var(--black-color);
-  margin: -40px 0 0 -10px;
+  margin-top: -3%;
+  text-align: center;
 }
 
 p {
@@ -32,7 +39,7 @@ p {
 }
 
 .marco {
-  margin: -10px 100px 0px 100px;
+  margin: 0px 100px;
   background-color: white;
   overflow: hidden;
 }
@@ -44,33 +51,25 @@ h2 {
   font-weight: 700;
   color: var(--red-color);
   text-transform: capitalize;
+  margin: 2%;
 }
 
 .logo {
-  height: 250px;
-  margin: -80px 0px -20px -65px;
+  height: 60px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-left: 5%;
+  margin-top: 2%;
+  vertical-align: bottom;
 }
 
-.logo-contenedor {
-  height: 80px;
-  width: 250px;
-  border-radius: 20px;
-  overflow: hidden;
-  margin: 40px 0 0 70px;
-}
-
-ul li {
-  list-style-type: none;
-  color: var(--black-color);
-}
-
-.menu {
+nav ul {
   float: right;
-  margin: -70px 70px 0 0;
+  margin: 3.5% 5% 0 0;
 }
 
-nav li {
-  display: inline;
+nav ul li {
+  display: inline-block;
   text-transform: uppercase;
   padding: 5px;
 }
@@ -90,14 +89,7 @@ nav a:hover, nav .current {
   border-radius: 5px;
   height: 5px;
   width: 90%;
-  margin: 50px 0 50px 5%;
-}
-
-.mapa {
-  overflow: hidden;
-  width: 41%;
-  margin-left: 30%;
-  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
+  margin: 50px auto 50px;
 }
 
 .main-image {
@@ -107,13 +99,32 @@ nav a:hover, nav .current {
 }
 
 .local-image {
-  height: 100%;
   width: 100%;
-  -webkit-filter: grayscale(60%);
+  /*filter: grayscale(60%);*/
+  animation-name: local;
+  animation-duration: 3s;
 }
 
-.parrafo {
+@keyframes local {
+  0% {filter: grayscale(100%);}
+  100% {filter: grayscale(0%);}
+}
+
+.pie-main-image {
   font-size: 30px;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.mapa-container {
+  overflow: hidden;
+  margin: 0 29.5% 0 29.5%;
+  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.mapa {
+  object-fit: cover;
 }
 
 .productos {
@@ -121,11 +132,11 @@ nav a:hover, nav .current {
 }
 
 .form {
-  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
   color: var(--black-color);
   background-color: var(--white-color);
   padding: 2%;
-  margin: 0 0 0 22%;
+  margin: auto;
   align-items: left;
   position: relative;
   font-size: larger;
@@ -136,10 +147,12 @@ nav a:hover, nav .current {
   text-align: right;
   margin-right: 40px;
 }
-    
+
 footer ul li {
       text-align: center;
       color: var(--rose-color);
       font-weight: 400;
       font-size: medium;
-    }
+      line-height: 130%;
+      padding: 5px 0;
+}
