@@ -3,41 +3,43 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width", initial-scale=1.0>
   <title>Ferreteria Torresel</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-  <div class="marco">
 
-    <header>
-        <nav class="menu">  
-          <a href="index.html"><img class="logo" src="media/logo.svg" alt="logo"></a>
-          <ul>
-            <li><a class="current" href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="ubicacion.html">Ubicación</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="contenedor flex-header">
+      <a href="index.html"><img class="logo" src="media/logo.svg" alt="logo"></a>
+      <a href="index.html"><img class="logo logo-mobile" src="media/logo-mobile.svg" alt="logo"></a>
 
-    <div class="separador"></div>
+      <nav>  
+        <ul>
+          <li><a class="current" href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="ubicacion.html">Ubicación</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
     
-    <main>
- 
-        <h2>FERRETERÍA</h2>
-        <H1 class="torresel">TORRESEL</H1>
-        <div><img class="local-image" src="media/main-image.jpeg" alt="imagen principal"></div>
-        <div class="pie-main-image">
-            <p> Todo lo que necesitas en un solo lugar y al mejor precio: Ferreteria general, sanitarios, electricidad, pinturas y más.</p> 
-        </div>
-    </main> 
-
-    <div class="separador"></div>
+  <main>
+    <div class="contenedor">
+      <H1 class="torresel"> <span class="titulo">FERRETERÍA</span> TORRESEL</H1>
+      <img class="local-image" src="media/main-image.jpeg" alt="imagen principal">
+      <div class="pie-main-image">
+          <p> Todo lo que necesitas en un solo lugar y al mejor precio</p>
+          <div class="rubros"></div>
+      </div>
+    </div>
+  </main> 
     
-    <footer>
+  <footer>
+    <div class="contenedor">
       <ul>
         <li>Todos los derechos reservados</li>
         <li>Ferreteria Torresel</li>
@@ -46,8 +48,8 @@
         <li>Teléfono: (011) 4664-1537</li>
         <li>ferreteriatorresel@gmail.com</li>
       </ul>
-    </footer>
+    </div>
+  </footer>
     
-  </body>
-</div>
+</body>
 </html>

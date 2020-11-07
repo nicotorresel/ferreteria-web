@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;600;700;800&display=swap');
 
+/* reseteo variables */
+
 :root {
   --black-color: #1F1C1B;
   --grey-color: #535353;
@@ -17,61 +19,44 @@
 }
 
 body {
-background-color: var(--secondary-background-color);
-font-family: 'Montserrat', sans-serif;
-color: var(--grey-color);
--webkit-font-smoothing: antialiased;
-font-size: larger;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--grey-color);
+  -webkit-font-smoothing: antialiased;
 }
 
-h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 900;
-  font-size: 100px;
-  color: var(--black-color);
-  margin-top: -3%;
-  text-align: center;
+/* -----------HEADER, LOGO Y NAV ------------*/
+
+.flex-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-p {
-  padding: 0 30px 0 30px;
-  text-align: centers;
-}
-
-.marco {
-  margin: 0px 100px;
-  background-color: white;
-  overflow: hidden;
-}
-
-h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 40px;
-  text-align: center;
-  font-weight: 700;
-  color: var(--red-color);
-  text-transform: capitalize;
-  margin: 2%;
+header {
+  background-color: rgba(205,205,205,0.8);
+  position: sticky;
+  top: 0;
 }
 
 .logo {
   height: 60px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  margin-left: 5%;
-  margin-top: 2%;
   vertical-align: bottom;
 }
 
+.logo-mobile {
+  display: none;
+}
+
 nav ul {
-  float: right;
-  margin: 3.5% 5% 0 0;
+  display: flex;
 }
 
 nav ul li {
-  display: inline-block;
-  text-transform: uppercase;
-  padding: 5px;
+  margin: 10px;
+  list-style: none;
 }
 
 nav a:link, nav :visited {
@@ -84,25 +69,57 @@ nav a:hover, nav .current {
   color: var(--red-color);
 }
 
-.separador {
-  background-color: var(--red-color);
-  border-radius: 5px;
-  height: 5px;
-  width: 90%;
-  margin: 50px auto 50px;
+/*---------------------------------------------------------------------*/
+
+/* contenedor para aplicar un margin lateral en todos los contenidos */
+.contenedor {
+  width: 80%;
+  margin: auto;
 }
 
-.main-image {
-  color: var(--grey-color);
-  position: relative;
+
+h1 {
+  margin: 30px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 900;
+  font-size: 100px;
+  color: var(--black-color);
   text-align: center;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.1)
+}
+
+.titulo {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--red-color);
+  display: block;
+}
+
+p {
+  padding: 15px 20px;
+  text-align: center;
+  line-height: 2em;
+}
+
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  text-align: center;
+  font-weight: 700;
+  color: var(--red-color);
+  text-transform: capitalize;
+  margin: 20px;
 }
 
 .local-image {
   width: 100%;
-  /*filter: grayscale(60%);*/
   animation-name: local;
   animation-duration: 3s;
+  border-radius: 6px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
 }
 
 @keyframes local {
@@ -111,26 +128,43 @@ nav a:hover, nav .current {
 }
 
 .pie-main-image {
-  font-size: 30px;
-  text-align: center;
-  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 20px;
 }
 
-.mapa-container {
-  overflow: hidden;
-  margin: 0 29.5% 0 29.5%;
-  box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
-  object-fit: cover;
+.rubros:before {
+  color: var(--red-color);
+  content: 'FERRETERÍA GENERAL';
+  animation: rubro infinite 5s;
 }
 
+@keyframes rubro {
+  0% {content: 'FERRETERÍA GENERAL';}
+  20% {content: 'SANITARIOS';}
+  40% {content: 'ELECTRICIDAD';}
+  60% {content: 'PINTURAS';}
+  80% {content: 'Y MUCHO MÁS...';}
+}
+
+/*---------------------- MAPA---------------------------*/
+
+.mapa-contenedor {
+  width: 70%;
+  margin: 50px auto;
+}
 .mapa {
-  object-fit: cover;
+  width: 100%;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
 }
 
-.productos {
-  border: black;
-}
+/*---------------------------------------------------------*/
 
+/* ----------------------- FORM --------------------------*/
 .form {
   box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
   color: var(--black-color);
@@ -147,12 +181,78 @@ nav a:hover, nav .current {
   text-align: right;
   margin-right: 40px;
 }
+/*---------------------------------------------------------*/
+
+/*------------------FOOTER---------------------------------------*/
+
+footer {
+  margin: 20px;
+}
 
 footer ul li {
+      list-style: none;
       text-align: center;
       color: var(--rose-color);
       font-weight: 400;
-      font-size: medium;
-      line-height: 130%;
+      line-height: 15px;
       padding: 5px 0;
 }
+/*---------------------------------------------------------*/
+
+/* ----------------PRODUCTOS------------------------------*/
+.izquierda, .derecha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+.izquierda {
+  grid-template-areas: 
+    "titulo imagen"
+    "descripcion imagen";
+}
+
+.derecha {
+  grid-template-areas: 
+    "imagen titulo"
+    "imagen descripcion";
+}
+
+.ferreteria h2, .electricidad h2 {
+  grid-area: titulo; 
+  text-align: center;
+  margin-top: 20px;
+}
+.ferreteria img, .electricidad img {
+  grid-area: imagen;
+  border-radius: 6px;
+  justify-self: end;
+} 
+.ferreteria p, .electricidad p {
+  grid-area: descripcion;
+  text-align: center;
+}
+
+.sanitarios h2, .pinturas h2 {
+  grid-area: titulo;
+  text-align: center;
+  margin-top: 20px;
+}
+.sanitarios img, .pinturas img {
+  grid-area: imagen;
+  border-radius: 6px;
+} 
+.sanitarios p, .pinturas p {
+  grid-area: descripcion;
+  text-align: center;
+}
+
+.productos .ferreteria, 
+.productos .sanitarios,
+.productos .electricidad,
+.productos .pinturas {
+  margin-top: 50px  
+}
+/*----------------------------------------------------------*/

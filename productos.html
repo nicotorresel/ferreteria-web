@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Ferreteria Torresel</title>
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-
-<body>
-  <div class="marco">
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0>
+    <title>Ferreteria Torresel</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  
+  <body>
+  
     <header>
-      <nav>  
+      <div class="contenedor flex-header">
         <a href="index.html"><img class="logo" src="media/logo.svg" alt="logo"></a>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a class="current" href="productos.html">Productos</a></li>
-          <li><a href="ubicacion.html">Ubicación</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-  </header>
-
-    <div class="separador"></div>
+  
+        <nav>  
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a class="current" href="productos.html">Productos</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <main>
       <section class="productos">
-        <h2>Ferretería</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti blanditiis facilis saepe ullam amet similique. Animi est illum quibusdam totam, ipsam delectus beatae doloremque impedit atque. Cumque quod possimus itaque.</p>
-      </section>
-      <section class="productos">
-        <h2>Sanitarios</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti blanditiis facilis saepe ullam amet similique. Animi est illum quibusdam totam, ipsam delectus beatae doloremque impedit atque. Cumque quod possimus itaque.</p>
-      </section>
-      <section class="productos">
-        <h2>Electricidad</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti blanditiis facilis saepe ullam amet similique. Animi est illum quibusdam totam, ipsam delectus beatae doloremque impedit atque. Cumque quod possimus itaque.</p>
-      </section>
-      <section class="productos">
-        <h2>Pinturas</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti blanditiis facilis saepe ullam amet similique. Animi est illum quibusdam totam, ipsam delectus beatae doloremque impedit atque. Cumque quod possimus itaque.</p>
+        <h2>Productos</h2>
+        <div class="contenedor">
+          <article class="ferreteria izquierda">
+            <h2>Ferretería</h2>
+            <img src="https://picsum.photos/400/300" alt="ferreteria">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti blanditiis facilis saepe ullam amet similique. Animi est illum quibusdam totam, ipsam delectus beatae doloremque impedit atque. Cumque quod possimus itaque.</p>
+          </article>
+          <article class="sanitarios derecha">
+            <h2>Sanitarios</h2>
+            <img src="https://picsum.photos/400/300" alt="sanitarios">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti blanditiis facilis saepe ullam amet similique. Animi est illum quibusdam totam, ipsam delectus beatae doloremque impedit atque. Cumque quod possimus itaque.</p>
+          </article>
+          <article class="electricidad izquierda">
+            <h2>Electricidad</h2>
+            <img src="https://picsum.photos/400/300" alt="electricidad">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti blanditiis facilis saepe ullam amet similique. Animi est illum quibusdam totam, ipsam delectus beatae doloremque impedit atque. Cumque quod possimus itaque.</p>
+          </article>
+          <article class="pinturas derecha">
+            <h2>Pinturas</h2>
+            <img src="https://picsum.photos/400/300" alt="pinturas">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti blanditiis facilis saepe ullam amet similique. Animi est illum quibusdam totam, ipsam delectus beatae doloremque impedit atque. Cumque quod possimus itaque.</p>
+          </article>
+        </div>
       </section>
     </main>
 
-    <div class="separador"></div>
-    
     <footer>
       <ul>
         <li>Todos los derechos reservados</li>
