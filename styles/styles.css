@@ -5,6 +5,8 @@
 :root {
   --black-color: #1F1C1B;
   --grey-color: #535353;
+  --midgrey-color: #bdbdbd;
+  --lightgrey-color: rgba(230, 225, 225, 0.836);
   --primary-background-color: #eeeeee;
   --secondary-background-color: #edf2f6;
   --red-color: #de193a;
@@ -34,9 +36,10 @@ body {
 }
 
 header {
-  background-color: rgba(205,205,205,0.8);
+  background-color: rgba(230, 225, 225, 0.836);
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .logo {
@@ -173,13 +176,49 @@ h2 {
   margin: auto;
   align-items: left;
   position: relative;
-  font-size: larger;
+  font-size: em;
   width: 50%;
+  z-index: 0;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
 
 .campo label {
-  text-align: right;
-  margin-right: 40px;
+  font-size: em;
+  color: var(--midgrey-color);
+}
+
+.campo input {
+  border: none;
+  border-bottom: solid  1px var(--midgrey-color);
+  width: 100%;
+  height: 30px;
+}
+
+.suscripcion {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  margin: 30px 0px 30px 10px;
+}
+
+.suscripcion input {
+  height: 20px;
+}
+
+.boton-submit {
+  border: 1px solid var(--black-color);
+  border-radius: 5px;
+  color: var(--black-color);
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--lightgrey-color);
+  font-size: 1em;
+  padding: 5px 10px;
+  display: flex;
+  margin: auto;
 }
 /*---------------------------------------------------------*/
 
@@ -225,10 +264,13 @@ footer ul li {
   text-align: center;
   margin-top: 20px;
 }
+
 .ferreteria img, .electricidad img {
   grid-area: imagen;
   border-radius: 6px;
   justify-self: end;
+
+  
 } 
 .ferreteria p, .electricidad p {
   grid-area: descripcion;
@@ -255,4 +297,12 @@ footer ul li {
 .productos .pinturas {
   margin-top: 50px  
 }
+
+.ferreteria img {
+  margin-top: 30px;
+  margin-right: 15px;
+  padding: 50px 0;
+}
+
+
 /*----------------------------------------------------------*/
