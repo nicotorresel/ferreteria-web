@@ -9,7 +9,7 @@
   --lightgrey-color: rgba(230, 225, 225, 0.836);
   --primary-background-color: #eeeeee;
   --secondary-background-color: #edf2f6;
-  --red-color: #de193a;
+  --red-color: #D22d38;
   --rose-color: #a18588;
   --white-color: white;
 }
@@ -79,7 +79,7 @@ nav a:hover, nav .current {
 
 
 h1 {
-  margin: .5em 0;
+  margin: .5em 0 0 0;
   font-family: 'Open Sans', sans-serif;
   font-weight: 900;
   font-size: 4em;
@@ -123,32 +123,59 @@ h2 {
 }
 
 @keyframes local {
-  0% {filter: grayscale(100%);}
-  100% {filter: grayscale(0%);}
+  0% {filter: grayscale(1);}
+  100% {filter: grayscale(0);}
 }
 
-.pie-main-image {
+.main-image {
+  background: url(http://ferreteria-puntofijo.es/wp-content/uploads/2018/12/1511223474.jpg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  margin: 5em 0;
+  padding: 5em 0 0 10em;
+}
+
+.main-image .descripcion {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 1em;
-  font-weight: 600;
-  margin-top: 1em;
+  align-content: center;
+  width: 35%;
 }
 
-.rubros:before {
+.main-image .rubros:before {
+  font-weight: 600;
+  font-size: 2em;
   color: var(--red-color);
-  content: 'FERRETERÍA GENERAL';
+  content: 'FERRETERÍA';
   animation: rubro infinite 5s;
 }
 
+.main-image .boton {
+  margin: 2em;
+}
+
+.main-image a {
+  color: var(--red-color);
+  border: 1px solid var(--red-color);
+  border-radius: 5px;
+  background-color: var(--white-color);
+  font-size: 1.5em;
+  padding: .5em .7em;
+  text-decoration: none;
+}
+.main-image a:hover {
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+
 @keyframes rubro {
-  0% {content: 'FERRETERÍA GENERAL';}
+  0% {content: 'FERRETERÍA';}
   20% {content: 'SANITARIOS';}
   40% {content: 'ELECTRICIDAD';}
   60% {content: 'PINTURAS';}
-  80% {content: 'Y MUCHO MÁS...';}
+  80% {content: 'Y MÁS...';}
 }
 
 /*---------------------- MAPA---------------------------*/
@@ -206,10 +233,9 @@ h2 {
 
 .boton-submit {
   color: var(--red-color);
-  border: 2px solid var(--red-color);
+  border: 1px solid var(--red-color);
   border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
   background-color: var(--white-color);
   font-size: 1em;
   padding: .5em .7em;
@@ -219,7 +245,6 @@ h2 {
 
 .boton-submit:hover {
   background-color: var(--red-color);
-  border-color: var(--white-color);
   color: var(--white-color);
 }
 
@@ -328,4 +353,14 @@ footer ul li {
   .contenedor {
     width: 100vw;
   }
+
+  .main-image .rubros:before {
+    width: 100%;
+  }
+
+  .main-image .desc {
+    width: 100%;
+    text-align: center;
+  }
+
 }
