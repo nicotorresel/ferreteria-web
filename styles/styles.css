@@ -43,7 +43,6 @@ header {
 
 .logo {
   height: 40px;
-  vertical-align: bottom;
 }
 
 .logo-mobile {
@@ -314,3 +313,19 @@ footer ul li {
       padding: .4em 0;
 }
 /*---------------------------------------------------------*/
+
+
+@media only screen and (max-width: 768px) {
+
+  header a img {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: flex;
+  }
+
+  .contenedor {
+    width: 100vw;
+  }
+}
