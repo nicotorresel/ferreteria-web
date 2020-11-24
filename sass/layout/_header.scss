@@ -1,0 +1,60 @@
+header {
+  background-color: $lightgrey-color;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
+  .contenedor {
+    padding-top: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    .logo {
+      height: 40px;
+
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    
+    .logo-mobile {
+      display: none;
+      height: 40px;
+
+      @media only screen and (max-width: 768px) {
+        display: flex;
+      }
+    }
+    
+    .icon {
+      display: none;
+
+      @media only screen and (max-width: 768px){
+        display: flex;
+      }
+    }
+    
+    nav ul {
+      display: flex;
+
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+
+      li {
+        margin: .8em;
+        padding: 0 0 0 0.5rem;
+        font-size: .9rem;
+      }
+    }
+    
+    nav a:link, nav :visited {
+      color: $black-color;
+    }
+    
+    nav a:hover, nav .current {
+      color: $primary-color;
+    }
+  }
+}

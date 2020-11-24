@@ -1,0 +1,239 @@
+@import 'variables';
+@import 'reset';
+@import 'extend';
+@import 'mixins';
+/* -----------HEADER, LOGO Y NAV ------------*/
+@import './layout/header';
+
+/* contenedor para aplicar un margin lateral en todos los contenidos */
+.contenedor {
+  @extend %contenedor;
+}
+
+.title {
+  @extend %title;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3em;
+  }
+  
+  .title-span {
+    @extend %title-span;
+  }
+}
+
+p {
+  padding: 15px 20px;
+  text-align: center;
+  line-height: 2em;
+}
+
+
+h2 {
+  @extend %subtitle;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin: 2em;
+  
+  .galeria__local-image--front {
+    margin: .5em;
+    animation-name: local;
+    animation-duration: 3s;
+    border-radius: 6px;
+    box-shadow: $strong-box-shadow;
+    overflow: hidden;
+    object-fit: scale-down;
+  }  
+  
+  @keyframes local {
+    0% {filter: grayscale(1);}
+    100% {filter: grayscale(0);}
+  }
+
+  .galeria__local-image {
+    margin: .5em;
+    height: 70vh;
+    border-radius: 6px;
+    box-shadow: $strong-box-shadow;
+  }
+}
+
+.main-image {
+  background: url(http://ferreteria-puntofijo.es/wp-content/uploads/2018/12/1511223474.jpg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  margin: 5em 0;
+  padding: 5em 0 0 10em;
+
+  @media only screen and (max-width: 768px) {
+    margin: 3em 0 -12em 0;
+    padding: 0;
+    background-size: contain;
+  }
+  
+  .main-image__descripcion {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 35%;
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .main-image__descripcion__desc {
+    @media screen and (max-width: 768px) {
+      font-size: 1.2em;
+      margin: 0 .5em;
+    }
+  }
+  
+  .main-image__descripcion__rubros:before {
+    font-weight: 600;
+    font-size: 2em;
+    color: $primary-color;
+    content: 'FERRETERÍA';
+    animation: rubro infinite 5s;
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      font-size: 1em;
+    }
+  }
+  
+  .main-image__boton {
+    margin: 2em;
+    @media only screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+  
+  a {
+    @include button(1.5em);
+
+    @media only screen and (max-width: 768px) {
+      margin: auto;
+    }
+    
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+  
+  @keyframes rubro {
+    0% {content: 'FERRETERÍA';}
+    20% {content: 'SANITARIOS';}
+    40% {content: 'ELECTRICIDAD';}
+    60% {content: 'PINTURAS';}
+    80% {content: 'Y MÁS...';}
+  }
+}
+
+
+/*---------------------- MAPA---------------------------*/
+
+.contenedor__mapa {
+  display: flex;
+  margin: auto;
+  width: 70%;
+  box-shadow: $light-box-shadow;
+  
+  @media only screen and (max-width: 768px) {
+    width: 95%;
+  }
+}
+
+/*---------------------------------------------------------*/
+
+/* ----------------------- FORM --------------------------*/
+.form {
+  box-shadow: $light-box-shadow;
+  color: $black-color;
+  background-color: $white-color;
+  padding: 3em;
+  margin: auto;
+  align-items: left;
+  position: relative;
+  font-size: 1em;
+  width: 50%;
+  z-index: 0;
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+  }
+  
+  .form__campo {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    
+    label {
+      color: $midgrey-color;
+      
+      @media screen and (max-width: 768px) {
+        color: $white-color;
+      }
+    }
+    
+    input {
+      border: none;
+      border-bottom: solid  1px $midgrey-color;
+      width: 100%;
+      height: 3em;
+    }
+  }
+  
+  .form__campo-suscripcion {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    
+    input {
+      height: 1.5em;
+    }
+    label {
+      @media screen and (max-width: 768px) {
+        color: $black-color;
+      }
+    }
+  }
+}
+
+.boton-submit {
+  @include button(1em);
+  display: flex;
+  margin: auto;
+  
+  &:hover {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+}
+
+
+/*---------------------------------------------------------*/
+
+/* ----------------PRODUCTOS------------------------------*/
+
+.productos {
+  h3 {
+  text-align: center;
+  color: $primary-color;
+  }
+}
+
+/*------------------FOOTER---------------------------------------*/
+
+footer {
+  @extend %footer;
+}
+/*---------------------------------------------------------*/
