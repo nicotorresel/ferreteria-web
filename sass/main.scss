@@ -13,7 +13,7 @@
 .title {
   @extend %title;
 
-  @media screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     font-size: 3em;
   }
   
@@ -41,25 +41,25 @@ h2 {
   margin: 2em;
   
   .galeria__local-image--front {
-    margin: .5em;
-    animation-name: local;
-    animation-duration: 3s;
-    border-radius: 6px;
-    box-shadow: $strong-box-shadow;
     overflow: hidden;
-    object-fit: scale-down;
+    object-fit: contain;
   }  
   
-  @keyframes local {
-    0% {filter: grayscale(1);}
-    100% {filter: grayscale(0);}
-  }
-
   .galeria__local-image {
     margin: .5em;
     height: 70vh;
     border-radius: 6px;
     box-shadow: $strong-box-shadow;
+  }
+  
+  .galeria__local-image:hover {
+    animation-name: local;
+    animation-duration: 10s;
+  }
+  
+  @keyframes local {
+    0% {filter: grayscale(1);}
+    100% {filter: grayscale(1);}
   }
 }
 
@@ -91,7 +91,7 @@ h2 {
   }
 
   .main-image__descripcion__desc {
-    @media screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
       font-size: 1.2em;
       margin: 0 .5em;
     }
@@ -168,19 +168,20 @@ h2 {
   width: 50%;
   z-index: 0;
 
-  @media screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     width: 95%;
+    padding: .5em;
   }
   
   .form__campo {
     display: flex;
     flex-direction: column;
-    margin: 2em;
+    margin: 1em;
     
     label {
       color: $midgrey-color;
       
-      @media screen and (max-width: 768px) {
+      @media only screen and (max-width: 768px) {
         color: $white-color;
       }
     }
@@ -201,14 +202,14 @@ h2 {
       height: 1.5em;
     }
     label {
-      @media screen and (max-width: 768px) {
+      @media only screen and (max-width: 768px) {
         color: $black-color;
       }
     }
   }
 }
 
-.boton-submit {
+.form__btn {
   @include button(1em);
   display: flex;
   margin: auto;

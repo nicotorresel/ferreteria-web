@@ -13,18 +13,31 @@
   <body>
     
     <header>
-      <div class="contenedor flex-header">
-        <a href="index.html"><img class="logo" src="media/logo.svg" alt="logo"></a>
-        <a href="index.html"><img class="logo logo-mobile" src="media/logo-mobile.svg" alt="logo"></a>
-        <nav>  
+      <div class="contenedor">
+
+        <a href="index.html" class="logo">
+          <img src="media/logo.svg" alt="logo" class="logo" >
+        </a>
+        <a href="#menu">
+          <img src="./media/menu.svg" alt="menu" class="icon open" >
+        </a>
+        <a href="index.html">
+          <img src="media/logo-mobile.svg" alt="logo" class="logo-mobile" >
+        </a> 
+
+        <nav id="menu">  
+          <a href="#">
+            <img src="./media/close.svg" alt="" class="icon close">
+          </a>
           <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html">Inicio </a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="productos.html">Productos</a></li>
             <li><a href="ubicacion.html">Ubicación</a></li>
-            <li><a class="current" href="contacto.html">Contacto</a></li>
+            <li><a href="contacto.html" class="current">Contacto</a></li>
           </ul>
         </nav>
+
       </div>
     </header>
 
@@ -52,7 +65,7 @@
             <label for="mensaje">Consulta</label>
             <textarea name="consulta" id="mensaje" rows="15" placeholder="*Escriba su consulta aqui.." required></textarea>
           </div>
-            <input class="boton-submit" type="submit" value="Enviar formulario">
+            <input class="form__btn" type="submit" value="Enviar formulario">
         </form>
         <p><span>(*)</span>Campos requeridos</p>
       </div>
