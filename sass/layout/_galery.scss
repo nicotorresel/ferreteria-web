@@ -1,0 +1,28 @@
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  
+  .galeria__local-image {
+    margin: .5em;
+    height: 50vh;
+    width: 20em;
+    border-radius: 6px;
+    box-shadow: $box-shadow;
+
+    @media only screen and (max-width:768px) {
+      box-shadow: none;
+    }
+    
+    &:hover {
+      animation-name: local;
+      animation-duration: 10s;
+    }
+    
+    @keyframes local {
+      0% {filter: grayscale(1);}
+      100% {filter: grayscale(1);}
+    }
+  } 
+}

@@ -2,8 +2,8 @@
 @import 'reset';
 @import 'extend';
 @import 'mixins';
-/* -----------HEADER, LOGO Y NAV ------------*/
 @import './layout/header';
+@import './layout/galery';
 
 /* contenedor para aplicar un margin lateral en todos los contenidos */
 .contenedor {
@@ -31,36 +31,6 @@ p {
 
 h2 {
   @extend %subtitle;
-}
-
-.galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  margin: 2em;
-  
-  .galeria__local-image--front {
-    overflow: hidden;
-    object-fit: contain;
-  }  
-  
-  .galeria__local-image {
-    margin: .5em;
-    height: 70vh;
-    border-radius: 6px;
-    box-shadow: $strong-box-shadow;
-  }
-  
-  .galeria__local-image:hover {
-    animation-name: local;
-    animation-duration: 10s;
-  }
-  
-  @keyframes local {
-    0% {filter: grayscale(1);}
-    100% {filter: grayscale(1);}
-  }
 }
 
 .main-image {
@@ -146,7 +116,7 @@ h2 {
   display: flex;
   margin: auto;
   width: 70%;
-  box-shadow: $light-box-shadow;
+  box-shadow: $box-shadow;
   
   @media only screen and (max-width: 768px) {
     width: 95%;
@@ -157,7 +127,7 @@ h2 {
 
 /* ----------------------- FORM --------------------------*/
 .form {
-  box-shadow: $light-box-shadow;
+  box-shadow: $box-shadow;
   color: $black-color;
   background-color: $white-color;
   padding: 3em;
@@ -207,18 +177,24 @@ h2 {
       }
     }
   }
+  
+  .form__btn {
+    @include button(1em);
+    display: flex;
+    margin: auto;
+    
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    box-shadow: none;
+  }
+ 
 }
 
-.form__btn {
-  @include button(1em);
-  display: flex;
-  margin: auto;
-  
-  &:hover {
-    background-color: $primary-color;
-    color: $white-color;
-  }
-}
 
 
 /*---------------------------------------------------------*/

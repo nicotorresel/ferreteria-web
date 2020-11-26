@@ -10,7 +10,7 @@ header {
     justify-content: space-between;
     
     @media only screen and (max-width: 768px) {
-      padding: .5em;
+      padding: 1em;
       align-items: center;
     }
  
@@ -68,21 +68,20 @@ header {
 
           a {
             color: $black-color;
-            &:link, :visited {
-              color: $black-color;
+            &:link, &:visited {
+              color: $grey-color;
             }
 
-            &:hover, .current {
+            &:hover, &.current {
               color: $primary-color;
             }
             @media only screen and (max-width:768px) {
-              color: $white-color;
               font-size: 2em;
               font-weight: 500;
             }
           }
           @media only screen and (max-width:768px) {
-            margin: 2em 0;
+            margin: .8em 0;
           }
         }
         @media only screen and (max-width: 768px) {
@@ -100,7 +99,7 @@ header {
         top: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba($color: #0000, $alpha: .8);
+        background-color: $lightgrey-color2;
         transition: left .5s;
       }
     }
