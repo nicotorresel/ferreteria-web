@@ -1,0 +1,10 @@
+.contenedor__mapa {
+  display: flex;
+  margin: auto;
+  width: 70%;
+  box-shadow: $box-shadow;
+  
+  @media only screen and (max-width: 768px) {
+    width: 95%;
+  }
+}

@@ -213,18 +213,6 @@ header .contenedor nav ul li a:hover, header .contenedor nav ul li a.current {
   }
 }
 
-/* contenedor para aplicar un margin lateral en todos los contenidos */
-@media only screen and (max-width: 768px) {
-  .title {
-    font-size: 3em;
-  }
-}
-p {
-  padding: 15px 20px;
-  text-align: center;
-  line-height: 2em;
-}
-
 .main-image {
   background: url(http://ferreteria-puntofijo.es/wp-content/uploads/2018/12/1511223474.jpg);
   min-height: 100vh;
@@ -315,7 +303,6 @@ p {
   }
 }
 
-/*---------------------- MAPA---------------------------*/
 .contenedor__mapa {
   display: flex;
   margin: auto;
@@ -328,8 +315,6 @@ p {
   }
 }
 
-/*---------------------------------------------------------*/
-/* ----------------------- FORM --------------------------*/
 .form {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   color: #1F1C1B;
@@ -399,12 +384,19 @@ p {
   }
 }
 
-/*---------------------------------------------------------*/
-/* ----------------PRODUCTOS------------------------------*/
 .productos h3 {
   text-align: center;
   color: #D22d38;
 }
 
-/*------------------FOOTER---------------------------------------*/
-/*---------------------------------------------------------*/
+/* contenedor para aplicar un margin lateral en todos los contenidos */
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 3em;
+  }
+}
+p {
+  padding: 15px 20px;
+  text-align: center;
+  line-height: 2em;
+}

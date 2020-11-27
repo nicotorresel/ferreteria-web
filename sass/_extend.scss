@@ -40,11 +40,13 @@
 %footer {
   margin: 1em;
   
-  ul li {
-        text-align: center;
-        color: $rose-color;
-        font-size: small;
-        font-weight: 300;
-        padding: .4em 0;
+  ul {
+    li {
+          text-align: center;
+          color: $rose-color;
+          font-size: small;
+          font-weight: 300;
+          padding: .4em 0;
+    }
   }
 }

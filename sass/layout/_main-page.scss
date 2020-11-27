@@ -1,0 +1,75 @@
+.main-image {
+  background: url(http://ferreteria-puntofijo.es/wp-content/uploads/2018/12/1511223474.jpg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  margin: 5em 0;
+  padding: 5em 0 0 10em;
+
+  @media only screen and (max-width: 768px) {
+    margin: 3em 0 -12em 0;
+    padding: 0;
+    background-size: contain;
+  }
+  
+  .main-image__descripcion {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 35%;
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .main-image__descripcion__desc {
+    @media only screen and (max-width: 768px) {
+      font-size: 1.2em;
+      margin: 0 .5em;
+    }
+  }
+  
+  .main-image__descripcion__rubros:before {
+    font-weight: 600;
+    font-size: 2em;
+    color: $primary-color;
+    content: 'FERRETERÍA';
+    animation: rubro infinite 5s;
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      font-size: 1em;
+    }
+  }
+  
+  .main-image__boton {
+    margin: 2em;
+    @media only screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+  
+  a {
+    @include button(1.5em);
+
+    @media only screen and (max-width: 768px) {
+      margin: auto;
+    }
+    
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+  
+  @keyframes rubro {
+    0% {content: 'FERRETERÍA';}
+    20% {content: 'SANITARIOS';}
+    40% {content: 'ELECTRICIDAD';}
+    60% {content: 'PINTURAS';}
+    80% {content: 'Y MÁS...';}
+  }
+}
