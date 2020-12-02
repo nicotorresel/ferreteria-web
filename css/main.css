@@ -47,7 +47,7 @@ h2 {
   font-family: "Open Sans", sans-serif;
   font-size: 2em;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   color: #D22d38;
   text-transform: capitalize;
   margin: 1em;
@@ -61,17 +61,6 @@ h2 {
   .contenedor {
     width: 98%;
   }
-}
-
-footer {
-  margin: 1em;
-}
-footer ul li {
-  text-align: center;
-  color: #a18588;
-  font-size: small;
-  font-weight: 300;
-  padding: 0.4em 0;
 }
 
 header {
@@ -144,11 +133,23 @@ header .contenedor nav ul li {
 header .contenedor nav ul li a {
   color: #1F1C1B;
 }
-header .contenedor nav ul li a:link, header .contenedor nav ul li a:visited {
-  color: #535353;
-}
 header .contenedor nav ul li a:hover, header .contenedor nav ul li a.current {
   color: #D22d38;
+}
+header .contenedor nav ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  background: #D22d38;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+header .contenedor nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
 }
 @media only screen and (max-width: 768px) {
   header .contenedor nav ul li a {
@@ -303,6 +304,15 @@ header .contenedor nav ul li a:hover, header .contenedor nav ul li a.current {
   }
 }
 
+.promos {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.promos h3 {
+  text-align: center;
+}
+
 .contenedor__mapa {
   display: flex;
   margin: auto;
@@ -387,6 +397,37 @@ header .contenedor nav ul li a:hover, header .contenedor nav ul li a.current {
 .productos h3 {
   text-align: center;
   color: #D22d38;
+}
+
+.footer {
+  color: #1F1C1B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3em;
+  font-size: 0.8em;
+}
+.footer .shortcuts ul {
+  text-align: left;
+}
+.footer .shortcuts ul li.indice {
+  text-decoration: underline;
+  font-weight: 600;
+}
+.footer .shortcuts ul li a {
+  color: #1F1C1B;
+}
+.footer .info ul {
+  text-align: right;
+}
+.footer .info ul li a {
+  color: #1F1C1B;
+}
+
+footer {
+  background: rgba(230, 225, 225, 0.836);
+  padding: 0.2em 0;
+  margin-top: 2em;
 }
 
 /* contenedor para aplicar un margin lateral en todos los contenidos */

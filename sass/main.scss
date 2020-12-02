@@ -8,6 +8,7 @@
 @import './layout/location';
 @import './layout/contact';
 @import './layout/products';
+@import './layout/footer';
 
 /* contenedor para aplicar un margin lateral en todos los contenidos */
 .contenedor {
@@ -34,8 +35,4 @@ p {
 
 h2 {
   @extend %subtitle;
-}
-
-footer {
-  @extend %footer;
 }

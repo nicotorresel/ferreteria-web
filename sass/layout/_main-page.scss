@@ -73,3 +73,13 @@
     80% {content: 'Y MÁS...';}
   }
 }
+
+.promos {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: $box-shadow;
+
+  h3 {
+    text-align: center;
+  }
+}

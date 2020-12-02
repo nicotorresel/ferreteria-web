@@ -22,7 +22,7 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 2em;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   color: $primary-color;
   text-transform: capitalize;
   margin: 1em;
@@ -31,22 +31,7 @@
 %contenedor {
   width: 80%;
   margin: auto;
-
   @media only screen and (max-width: 768px) {
     width: 98%;
-  }
-}
-
-%footer {
-  margin: 1em;
-  
-  ul {
-    li {
-          text-align: center;
-          color: $rose-color;
-          font-size: small;
-          font-weight: 300;
-          padding: .4em 0;
-    }
   }
 }
