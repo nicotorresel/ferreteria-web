@@ -3,4 +3,13 @@
   text-align: center;
   color: $primary-color;
   }
+  .more {
+    color: $black-color;
+    display: grid;
+    place-items: center;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
 }

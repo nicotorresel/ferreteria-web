@@ -398,6 +398,14 @@ header .contenedor nav ul li a:hover:after {
   text-align: center;
   color: #D22d38;
 }
+.productos .more {
+  color: #1F1C1B;
+  display: grid;
+  place-items: center;
+}
+.productos .more:hover {
+  color: #D22d38;
+}
 
 .footer {
   color: #1F1C1B;
