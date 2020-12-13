@@ -4,7 +4,12 @@ footer {
   padding: 1em 0;
   margin-top: 2em;
   font-size: .8em;
-  font-weight: 500;
+  font-weight: 400;
+
+  @media only screen and (max-width: 768px) {
+    font-size: .6em;
+    font-weight: 300;
+  }
   
   .info {
     ul {
