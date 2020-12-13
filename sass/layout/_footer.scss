@@ -1,30 +1,24 @@
 
 footer {
   background: $lightgrey-color;
-  padding: .2em 0;
+  padding: 1em 0;
   margin-top: 2em;
   font-size: .8em;
   font-weight: 500;
   
-  .footer {
-    color: $black-color;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2em;
-    font-size: .8em;
-    font-weight: 500;
-
+  .info {
     ul {
-      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
       li {
         a {
           color: $black-color;
         }
-
-        @media only screen and (max-width: 768px) {
-          margin: .5em auto;
-        }
+      }
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
       }
     }
   }
@@ -33,57 +27,22 @@ footer {
     height: 1px;
     background-color: $grey-color;
     margin: 1em auto;
-
-    &.divi {
-      @media only screen and (max-width: 768px) {
-        display: none;
-      }
-    }
   }
-
-  .navegacion {
-    ul {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-      li {
-        margin: 0 2em;
-        
-        @media only screen and (max-width: 768px) {
-          margin: .5em auto;
-        }
-        a {
-          color: $black-color;
-        }
-        img {
-          height: 2.5em;
-          &.logo-footer{
-            margin: 2em 0;
-          }
-        }
-      }
-      @media only screen and (max-width: 768px) {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    @media only screen and (max-width: 768px) {
-      display: none;
-    }
-  }
+  
   .copyright {
     ul {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       li {
+        margin: .5em auto;
         img {
           height: 2em;
-        }
-        @media only screen and (max-width: 768px) {
-          margin: 1em auto;
+          &:hover {
+            content: url(../../media/linkedin-red.png);
+          }
         }
       }
 
