@@ -437,9 +437,56 @@ header .contenedor nav ul li a:hover:after {
   text-align: center;
   color: #D22d38;
 }
-.productos a img {
+.productos .marcas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productos .marcas a {
+  margin: auto 1em;
+}
+.productos .ferreteria a img {
+  height: 1.8em;
+}
+.productos .ferreteria a img.bremen {
+  height: 2.2em;
+}
+@media only screen and (max-width: 1000px) {
+  .productos .ferreteria a img.bremen {
+    height: 1.8em;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .productos .ferreteria a img {
+    height: 1.2em;
+  }
+}
+.productos .sanitarios a img {
+  height: 3em;
+}
+.productos .electricidad a img {
+  height: 3em;
+}
+.productos .electricidad a img.medio {
+  height: 5em;
+}
+@media only screen and (max-width: 1040px) {
+  .productos .electricidad a img.medio {
+    height: 3em;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  .productos .electricidad a img {
+    height: 2em;
+  }
+}
+.productos .pinturas a img {
   height: 2em;
-  margin: auto 0.5em;
+}
+@media only screen and (max-width: 1040px) {
+  .productos .pinturas a img {
+    height: 1.3em;
+  }
 }
 
 footer {
