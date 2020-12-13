@@ -43,11 +43,9 @@ footer {
 
       li {
         margin: .5em auto;
-        img {
-          height: 2em;
-          &:hover {
-            content: url(../../media/linkedin-red.png);
-          }
+        a {
+          color: $black-color;
+          font-weight: 500;
         }
       }
 

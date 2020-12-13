@@ -529,11 +529,9 @@ footer .copyright ul {
 footer .copyright ul li {
   margin: 0.5em auto;
 }
-footer .copyright ul li img {
-  height: 2em;
-}
-footer .copyright ul li img:hover {
-  content: url(../../media/linkedin-red.png);
+footer .copyright ul li a {
+  color: #1F1C1B;
+  font-weight: 500;
 }
 @media only screen and (max-width: 768px) {
   footer .copyright ul {
