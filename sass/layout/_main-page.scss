@@ -1,5 +1,5 @@
 .main-image {
-  background: url(http://ferreteria-puntofijo.es/wp-content/uploads/2018/12/1511223474.jpg);
+  background: url(../../media/background.jpg);
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: contain;
@@ -8,9 +8,8 @@
   padding: 5em 0 0 10em;
 
   @media only screen and (max-width: 768px) {
-    margin: 3em 0 -12em 0;
+    margin: 3em 0 1 em 0;
     padding: 0;
-    background-size: contain;
   }
   
   .main-image__descripcion {

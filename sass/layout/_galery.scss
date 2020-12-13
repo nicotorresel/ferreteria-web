@@ -55,6 +55,8 @@
     height: 90%;
     &.main-local {
       height: 80%;
+      width: 100%;
+      object-fit: contain;
     }
   }
   .close {

@@ -247,13 +247,15 @@ header .contenedor nav ul li a:hover:after {
 }
 .local img.main-local {
   height: 80%;
+  width: 100%;
+  object-fit: contain;
 }
 .local .close {
   position: absolute;
 }
 
 .main-image {
-  background: url(http://ferreteria-puntofijo.es/wp-content/uploads/2018/12/1511223474.jpg);
+  background: url(../../media/background.jpg);
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: contain;
@@ -263,9 +265,8 @@ header .contenedor nav ul li a:hover:after {
 }
 @media only screen and (max-width: 768px) {
   .main-image {
-    margin: 3em 0 -12em 0;
+    margin: 3em 0 1 em 0;
     padding: 0;
-    background-size: contain;
   }
 }
 .main-image .main-image__descripcion {
@@ -449,7 +450,8 @@ footer {
   background: rgba(230, 225, 225, 0.836);
   padding: 0.2em 0;
   margin-top: 2em;
-  line-height: 1.8em;
+  font-size: 0.8em;
+  font-weight: 500;
 }
 footer .footer {
   color: #1F1C1B;
@@ -458,33 +460,79 @@ footer .footer {
   align-items: center;
   margin-top: 2em;
   font-size: 0.8em;
+  font-weight: 500;
 }
-footer .footer .shortcuts ul {
+footer .footer ul {
   text-align: left;
 }
-footer .footer .shortcuts ul li.indice {
-  text-decoration: underline;
-  font-weight: 600;
-}
-footer .footer .shortcuts ul li a {
+footer .footer ul li a {
   color: #1F1C1B;
 }
-footer .footer .middle {
-  width: 20%;
+@media only screen and (max-width: 768px) {
+  footer .footer ul li {
+    margin: 0.5em auto;
+  }
 }
-footer .footer .middle ul {
-  text-align: center;
+footer .divisor {
+  height: 1px;
+  background-color: #535353;
+  margin: 1em auto;
 }
-footer .footer .middle ul img {
-  height: 3em;
-  margin: 1em 0;
+@media only screen and (max-width: 768px) {
+  footer .divisor.divi {
+    display: none;
+  }
 }
-footer .footer .info ul {
-  text-align: right;
-  line-height: 3em;
+footer .navegacion ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
-footer .footer .info ul li a {
+footer .navegacion ul li {
+  margin: 0 2em;
+}
+@media only screen and (max-width: 768px) {
+  footer .navegacion ul li {
+    margin: 0.5em auto;
+  }
+}
+footer .navegacion ul li a {
   color: #1F1C1B;
+}
+footer .navegacion ul li img {
+  height: 2.5em;
+}
+footer .navegacion ul li img.logo-footer {
+  margin: 2em 0;
+}
+@media only screen and (max-width: 768px) {
+  footer .navegacion ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .navegacion {
+    display: none;
+  }
+}
+footer .copyright ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .copyright ul li img {
+  height: 2em;
+}
+@media only screen and (max-width: 768px) {
+  footer .copyright ul li {
+    margin: 1em auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .copyright ul {
+    flex-direction: column;
+  }
 }
 
 /* contenedor para aplicar un margin lateral en todos los contenidos */

@@ -3,7 +3,8 @@ footer {
   background: $lightgrey-color;
   padding: .2em 0;
   margin-top: 2em;
-  line-height: 1.8em;
+  font-size: .8em;
+  font-weight: 500;
   
   .footer {
     color: $black-color;
@@ -12,44 +13,83 @@ footer {
     align-items: center;
     margin-top: 2em;
     font-size: .8em;
+    font-weight: 500;
 
-    .shortcuts {
-      ul {
-        text-align: left;
-        li {
-          &.indice {
-            text-decoration: underline;
-            font-weight: 600;
-          }
-          a {
-            color: $black-color;
-          }
+    ul {
+      text-align: left;
+      li {
+        a {
+          color: $black-color;
+        }
+
+        @media only screen and (max-width: 768px) {
+          margin: .5em auto;
         }
       }
     }
+  }
 
-    .middle {
-      width: 20%;
-      ul {
-        text-align: center;    
+  .divisor {
+    height: 1px;
+    background-color: $grey-color;
+    margin: 1em auto;
+
+    &.divi {
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .navegacion {
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      li {
+        margin: 0 2em;
+        
+        @media only screen and (max-width: 768px) {
+          margin: .5em auto;
+        }
+        a {
+          color: $black-color;
+        }
         img {
-          height: 3em;
-          margin: 1em 0;
-        }
-      }
-    }
-    
-    .info {
-      ul {
-        text-align: right;
-        line-height: 3em;
-        li {
-          a {
-            color: $black-color;
+          height: 2.5em;
+          &.logo-footer{
+            margin: 2em 0;
           }
         }
       }
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
-  
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .copyright {
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        img {
+          height: 2em;
+        }
+        @media only screen and (max-width: 768px) {
+          margin: 1em auto;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
   }
 }
