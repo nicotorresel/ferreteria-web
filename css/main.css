@@ -346,10 +346,40 @@ header .contenedor nav ul li a:hover:after {
 .promos {
   display: flex;
   justify-content: space-between;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
-.promos h3 {
-  text-align: center;
+.promos .descuento {
+  margin: 2em auto;
+  transform: rotate(10deg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: #D22d38;
+  color: white;
+  border-radius: 0.5em;
+}
+.promos .descuento h3 {
+  font-size: 5em;
+  font-weight: 600;
+}
+.promos .descuento p {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.promos .envios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+  color: #D22d38;
+  border: solid 2px #D22d38;
+  font-size: 2em;
+  font-weight: 500;
+  border-radius: 0.5em;
+}
+@media only screen and (max-width: 768px) {
+  .promos {
+    flex-direction: column;
+  }
 }
 
 .contenedor__mapa {

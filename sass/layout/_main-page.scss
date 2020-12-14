@@ -76,9 +76,39 @@
 .promos {
   display: flex;
   justify-content: space-between;
-  box-shadow: $box-shadow;
 
-  h3 {
-    text-align: center;
+  .descuento {
+    margin: 2em auto;
+    transform: rotate(10deg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: $primary-color;
+    color: $white-color;
+    border-radius: .5em;
+    h3 {
+      font-size: 5em;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.5em;
+      text-transform: uppercase;
+    }
+  }
+
+  .envios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+    color: $primary-color;
+    border: solid 2px $primary-color;
+    font-size: 2em;
+    font-weight: 500;
+    border-radius: .5em;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
   }
 }
