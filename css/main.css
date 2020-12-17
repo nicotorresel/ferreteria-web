@@ -343,43 +343,64 @@ header .contenedor nav ul li a:hover:after {
   }
 }
 
-.promos {
+.promo {
+  margin-top: 2em;
+  color: white;
+}
+.promo .up {
+  height: 40vh;
+  background-color: #D22d38;
   display: flex;
   justify-content: space-between;
 }
-.promos .descuento {
-  margin: 2em auto;
-  transform: rotate(10deg);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  background: #D22d38;
-  color: white;
-  border-radius: 0.5em;
+.promo .up img {
+  height: 108%;
 }
-.promos .descuento h3 {
-  font-size: 5em;
+.promo .up .call-to-action a.boton {
   font-weight: 600;
-}
-.promos .descuento p {
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: #a51a23;
   font-size: 1.5em;
-  text-transform: uppercase;
+  padding: 0.5em 0.7em;
 }
-.promos .envios {
+.promo .up .call-to-action a.boton:hover {
+  background-color: white;
+  color: #a51a23;
+  border: 1px solid #a51a23;
+}
+.promo .down {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 0 1em;
-  color: #D22d38;
-  border: solid 2px #D22d38;
-  font-size: 2em;
-  font-weight: 500;
-  border-radius: 0.5em;
+  background-color: #a51a23;
+  padding: 1em;
 }
-@media only screen and (max-width: 768px) {
-  .promos {
+@media only screen and (max-width: 1000px) {
+  .promo .down {
     flex-direction: column;
   }
+}
+.promo .down h3 {
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.promo .down img {
+  height: 2.5em;
+}
+@media only screen and (max-width: 1000px) {
+  .promo .down img {
+    display: none;
+  }
+}
+.promo .down img.marca {
+  height: 4em;
+}
+.promo .down img.igual {
+  height: 1.8em;
 }
 
 .contenedor__mapa {
