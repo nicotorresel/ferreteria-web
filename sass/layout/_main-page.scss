@@ -76,31 +76,29 @@
 .promo {
   margin-top: 2em;
   color: $white-color;
+  box-shadow: $box-shadow;
 
   .up {
     height: 40vh;
     background-color: $primary-color;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 
-    img {   
-      height: 108%;
-    }
-    .call-to-action {
-      a {
-        &.boton {
-          font-weight: 600;
-          color: $white-color;
-          border: 1px solid $white-color;
-          border-radius: 5px;
-          background-color: $primary-color-darker;
-          font-size: 1.5em;
-          padding: .5em .7em;
-          &:hover {
-            background-color: $white-color;
-            color: $primary-color-darker;
-            border: 1px solid $primary-color-darker;
-          }
+    a {
+      &.boton {
+        font-weight: 600;
+        color: $white-color;
+        border: 1px solid $white-color;
+        border-radius: 5px;
+        background-color: $primary-color-darker;
+        font-size: 1.5em;
+        padding: .5em .7em;
+        &:hover {
+          background-color: $white-color;
+          color: $primary-color-darker;
+          border: 1px solid $primary-color-darker;
         }
       }
     }
