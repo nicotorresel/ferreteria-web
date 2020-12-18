@@ -383,6 +383,7 @@ header .contenedor nav ul li a:hover:after {
   }
 }
 .promo .down h3 {
+  margin: 0;
   font-size: 2em;
   font-weight: 700;
   text-transform: uppercase;
