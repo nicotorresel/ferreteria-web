@@ -87,6 +87,10 @@
     justify-content: space-evenly;
     align-items: center;
 
+    h3 {
+      text-align: center;
+    }
+
     a {
       &.boton {
         font-weight: 600;

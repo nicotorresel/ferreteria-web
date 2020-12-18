@@ -357,6 +357,9 @@ header .contenedor nav ul li a:hover:after {
   justify-content: space-evenly;
   align-items: center;
 }
+.promo .up h3 {
+  text-align: center;
+}
 .promo .up a.boton {
   font-weight: 600;
   color: white;
