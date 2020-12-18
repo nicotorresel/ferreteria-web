@@ -398,10 +398,11 @@ header .contenedor nav ul li a:hover:after {
   }
 }
 .promo .down img.marca {
-  height: 4em;
+  height: 3.5em;
+  margin-bottom: 1em;
 }
 .promo .down img.igual {
-  height: 1.8em;
+  height: 1.5em;
 }
 
 .contenedor__mapa {
