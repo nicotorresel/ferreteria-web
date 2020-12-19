@@ -46,7 +46,7 @@
   }
   
   .main-image__boton {
-    margin: 2em;
+    margin-top: 2em;
     @media only screen and (max-width: 768px) {
       display: flex;
     }
@@ -75,7 +75,6 @@
 }
 
 .promo {
-  margin-top: 2em;
   color: $white-color;
   box-shadow: $box-shadow;
 
@@ -89,15 +88,19 @@
 
     h3 {
       text-align: center;
+
+      &.uno {
+        font-size: 3em;
+      }
     }
 
     a {
       &.boton {
         font-weight: 600;
-        color: $white-color;
-        border: 1px solid $white-color;
+        color: $black-color;
+        border: 1px solid $black-color;
         border-radius: 5px;
-        background-color: $primary-color-darker;
+        background-color: #FFFF00;
         font-size: 1.5em;
         padding: .5em .7em;
         &:hover {
@@ -121,7 +124,7 @@
     }
     h3 {
       margin: 0;
-      font-size: 2em;
+      font-size: 1.5em;
       font-weight: 700;
       text-transform: uppercase;
       text-shadow: 3px 3px 10px rgba(0,0,0,0.5);

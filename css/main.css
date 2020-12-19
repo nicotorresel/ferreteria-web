@@ -183,6 +183,11 @@ header .contenedor nav ul li a:hover:after {
   }
 }
 
+.nosotros {
+  margin: auto;
+  width: 60%;
+}
+
 .galeria {
   display: flex;
   flex-wrap: wrap;
@@ -190,8 +195,7 @@ header .contenedor nav ul li a:hover:after {
   align-content: center;
 }
 .galeria .galeria__local-image {
-  margin: 0.5em;
-  height: 50vh;
+  margin: 1em;
   width: 20em;
   border-radius: 6px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
@@ -202,6 +206,9 @@ header .contenedor nav ul li a:hover:after {
   }
 }
 .galeria .galeria__local-image:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+  box-shadow: -10px 32px 24px -28px black;
   animation-name: local;
   animation-duration: 10s;
 }
@@ -302,7 +309,7 @@ header .contenedor nav ul li a:hover:after {
   }
 }
 .main-image .main-image__boton {
-  margin: 2em;
+  margin-top: 2em;
 }
 @media only screen and (max-width: 768px) {
   .main-image .main-image__boton {
@@ -345,7 +352,6 @@ header .contenedor nav ul li a:hover:after {
 }
 
 .promo {
-  margin-top: 2em;
   color: white;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
@@ -360,12 +366,15 @@ header .contenedor nav ul li a:hover:after {
 .promo .up h3 {
   text-align: center;
 }
+.promo .up h3.uno {
+  font-size: 3em;
+}
 .promo .up a.boton {
   font-weight: 600;
-  color: white;
-  border: 1px solid white;
+  color: #1F1C1B;
+  border: 1px solid #1F1C1B;
   border-radius: 5px;
-  background-color: #a51a23;
+  background-color: #FFFF00;
   font-size: 1.5em;
   padding: 0.5em 0.7em;
 }
@@ -388,7 +397,7 @@ header .contenedor nav ul li a:hover:after {
 }
 .promo .down h3 {
   margin: 0;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 700;
   text-transform: uppercase;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);

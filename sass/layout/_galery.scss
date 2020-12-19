@@ -1,3 +1,8 @@
+.nosotros {
+  margin: auto;
+  width: 60%;
+}
+
 .galeria {
   display: flex;
   flex-wrap: wrap;
@@ -5,8 +10,8 @@
   align-content: center;
   
   .galeria__local-image {
-    margin: .5em;
-    height: 50vh;
+    margin: 1em;
+    //height: 50vh;
     width: 20em;
     border-radius: 6px;
     box-shadow: $box-shadow;
@@ -16,6 +21,9 @@
     }
     
     &:hover {
+      transform: scale(1.05);
+      transition: 0.5s;
+      box-shadow: -10px 32px 24px -28px rgba(0, 0, 0, 1);
       animation-name: local;
       animation-duration: 10s;
     }
