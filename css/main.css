@@ -369,6 +369,16 @@ header .contenedor nav ul li a:hover:after {
 .promo .up h3.uno {
   font-size: 3em;
 }
+@media only screen and (max-width: 768px) {
+  .promo .up h3.uno {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .promo .up h3.dos {
+    font-size: 1em;
+  }
+}
 .promo .up a.boton {
   font-weight: 600;
   color: #1F1C1B;
@@ -382,6 +392,11 @@ header .contenedor nav ul li a:hover:after {
   background-color: white;
   color: #a51a23;
   border: 1px solid #a51a23;
+}
+@media only screen and (max-width: 768px) {
+  .promo .up a.boton {
+    font-size: 1em;
+  }
 }
 .promo .down {
   display: flex;
